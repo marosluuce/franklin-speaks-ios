@@ -2,3 +2,5 @@ language: objective-c
 
 before-install:
     - git submodule update --init --recursive
+
+script: ./osx-cibuild.sh
