@@ -34,6 +34,10 @@ XCODEBUILD_SETTINGS="TEST_AFTER_BUILD=YES"
 ## Build Process
 ##
 
+echo "*** Getting submodules:"
+git submodule init
+git submodule update
+
 if [ -z "$*" ]
 then
     # lol recursive shell script
@@ -53,6 +57,7 @@ for target in "$@"
 do
     echo "$target"
 done
+
 
 echo "*** Cleaning all targets..."
 xcodebuild -alltargets clean OBJROOT="$PWD/build" SYMROOT="$PWD/build" -sdk iphonesimulator $XCODEBUILD_SETTINGS
