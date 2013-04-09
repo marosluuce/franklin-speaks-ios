@@ -66,9 +66,9 @@
 
 /* Begin PBXFileReference section */
 		14FD18C9171318B8006DD78B /* fTTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fTTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		14FD18CC171318B8006DD78B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		14FD18CE171318B8006DD78B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		14FD18D0171318B8006DD78B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		14FD18CC171318B8006DD78B /* UIKit.framework */ = {isa = PBXFileReference; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		14FD18CE171318B8006DD78B /* Foundation.framework */ = {isa = PBXFileReference; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		14FD18D0171318B8006DD78B /* CoreGraphics.framework */ = {isa = PBXFileReference; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		14FD18D4171318B8006DD78B /* fTTT-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "fTTT-Info.plist"; sourceTree = "<group>"; };
 		14FD18D6171318B8006DD78B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		14FD18D8171318B8006DD78B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -476,6 +476,7 @@
 		14FD190B171319CD006DD78B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ADDITIONAL_SDKS = iphonesimulator;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -491,6 +492,7 @@
 		14FD190C171319CD006DD78B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ADDITIONAL_SDKS = iphonesimulator;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

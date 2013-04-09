@@ -2,8 +2,6 @@
 
 SCRIPT_DIR=$(dirname "$0")
 
-echo $(xcodebuild -list)
-
 ##
 ## Configuration Variables
 ##
