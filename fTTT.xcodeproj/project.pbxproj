@@ -483,7 +483,7 @@
 				HEADER_SEARCH_PATHS = OCDSpec2;
 				INFOPLIST_FILE = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = ../OCDSpec2;
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -498,7 +498,7 @@
 				HEADER_SEARCH_PATHS = OCDSpec2;
 				INFOPLIST_FILE = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = ../OCDSpec2;
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
