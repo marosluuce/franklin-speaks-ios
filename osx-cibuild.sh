@@ -2,6 +2,8 @@
 
 SCRIPT_DIR=$(dirname "$0")
 
+echo $(xcodebuild -list)
+
 ##
 ## Configuration Variables
 ##
@@ -33,10 +35,6 @@ XCODEBUILD_SETTINGS="TEST_AFTER_BUILD=YES"
 ##
 ## Build Process
 ##
-
-echo "*** Getting submodules:"
-git submodule init
-git submodule update
 
 if [ -z "$*" ]
 then
