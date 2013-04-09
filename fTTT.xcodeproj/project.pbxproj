@@ -481,11 +481,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fTTTSpec/fTTTSpec-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					OCDSpec2,
-					"$(SRCROOT)/OCDSpec2",
-				);
+				HEADER_SEARCH_PATHS = OCDSpec2;
 				INFOPLIST_FILE = "";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
@@ -500,11 +501,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fTTTSpec/fTTTSpec-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					OCDSpec2,
-					"$(SRCROOT)/OCDSpec2",
-				);
+				HEADER_SEARCH_PATHS = OCDSpec2;
 				INFOPLIST_FILE = "";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
