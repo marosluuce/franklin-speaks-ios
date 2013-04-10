@@ -1,0 +1,21 @@
+Artisan: https://artisan.8thlight.com/projects/352/iterations/2159#
+
+Begin playing a basic player vs. player game in iOS.
+
+!3 Play Moves
+
+Player One is X, Player Two is O. No AI moves at this time.  Make sure we switch back and forth.
+
+|script        |Tic Tac Toe Game|
+|launch                         |
+|move to square|1               |
+|move to square|2               |
+|move to square|3               |
+|move to square|4               |
+|check         |square |1 |is |X|
+|check         |square |2 |is |O|
+|check         |square |3 |is |X|
+|check         |square |4 |is |O|
+
+
+

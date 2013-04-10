@@ -1,0 +1,11 @@
+!3 !-slim-!
+|'''Date: '''| 4:31:42 PM (CDT) on Wednesday, April 10, 2013 |
+|'''Test Page: '''|.AcceptanceTests.PlayerVsPlayerGame|
+|'''Command: '''| !-./bin/iOS/RunSlimTestsTargetWithSlimPort  8086-! |
+|'''Exit code: '''| 64 |
+|'''Time elapsed: '''| 5.239 seconds |
+
+----
+'''Standard Error:'''
+{{{ xcodebuild: error: SDK "iphonesimulator5.1" cannot be located.
+ }}}
