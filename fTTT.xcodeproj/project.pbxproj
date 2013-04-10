@@ -32,7 +32,7 @@
 		1429B96E1714C2EF0016E094 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1429B96D1714C2EF0016E094 /* InfoPlist.strings */; };
 		1429B9701714C2EF0016E094 /* iPhone-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 1429B96F1714C2EF0016E094 /* iPhone-Prefix.pch */; };
 		1429B9721714C2EF0016E094 /* Main.c in Sources */ = {isa = PBXBuildFile; fileRef = 1429B9711714C2EF0016E094 /* Main.c */; };
-		1429B9821714C3380016E094 /* MyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1429B9811714C3380016E094 /* MyTest.m */; };
+		1477301F1716171F001BC4E8 /* TicTacToeGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1477301E1716171F001BC4E8 /* TicTacToeGame.m */; };
 		1488BC4A1715BFAB00191E70 /* libOCDSpec2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1488BC491715BFAB00191E70 /* libOCDSpec2.a */; };
 		14FD18CD171318B8006DD78B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FD18CC171318B8006DD78B /* UIKit.framework */; };
 		14FD18CF171318B8006DD78B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FD18CE171318B8006DD78B /* Foundation.framework */; };
@@ -144,8 +144,8 @@
 		1429B97A1714C2EF0016E094 /* RunSlimTestsTargetWithSlimPort */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = RunSlimTestsTargetWithSlimPort; path = ../bin/iOS/RunSlimTestsTargetWithSlimPort; sourceTree = "<group>"; };
 		1429B97B1714C2EF0016E094 /* content.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = content.txt; path = ../example_tests/content.txt; sourceTree = "<group>"; };
 		1429B97C1714C2EF0016E094 /* properties.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = properties.xml; path = ../example_tests/properties.xml; sourceTree = "<group>"; };
-		1429B9801714C3380016E094 /* MyTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTest.h; sourceTree = "<group>"; };
-		1429B9811714C3380016E094 /* MyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTest.m; sourceTree = "<group>"; };
+		1477301D1716171F001BC4E8 /* TicTacToeGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicTacToeGame.h; sourceTree = "<group>"; };
+		1477301E1716171F001BC4E8 /* TicTacToeGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicTacToeGame.m; sourceTree = "<group>"; };
 		1488BC491715BFAB00191E70 /* libOCDSpec2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCDSpec2.a; sourceTree = "<group>"; };
 		14FD18C9171318B8006DD78B /* fTTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fTTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FD18CC171318B8006DD78B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -210,8 +210,8 @@
 				1429B97B1714C2EF0016E094 /* content.txt */,
 				1429B97C1714C2EF0016E094 /* properties.xml */,
 				1429B9251714C2EF0016E094 /* cslim */,
-				1429B9801714C3380016E094 /* MyTest.h */,
-				1429B9811714C3380016E094 /* MyTest.m */,
+				1477301D1716171F001BC4E8 /* TicTacToeGame.h */,
+				1477301E1716171F001BC4E8 /* TicTacToeGame.m */,
 			);
 			path = AcceptanceTests;
 			sourceTree = "<group>";
@@ -676,7 +676,7 @@
 				1429B94F1714C2EF0016E094 /* StatementExecutor.m in Sources */,
 				1429B96C1714C2EF0016E094 /* Fixtures.m in Sources */,
 				1429B9721714C2EF0016E094 /* Main.c in Sources */,
-				1429B9821714C3380016E094 /* MyTest.m in Sources */,
+				1477301F1716171F001BC4E8 /* TicTacToeGame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
