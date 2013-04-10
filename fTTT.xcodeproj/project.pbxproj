@@ -53,6 +53,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		149593951715113F008A0BDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14FD191217131B39006DD78B /* OCDSpec2.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 94A6BA5915BB2DE7003F22B6;
+			remoteInfo = OCDSpec2;
+		};
 		14FD191917131B3A006DD78B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 14FD191217131B39006DD78B /* OCDSpec2.xcodeproj */;
@@ -499,6 +506,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				149593961715113F008A0BDD /* PBXTargetDependency */,
 			);
 			name = fTTTSpec;
 			productName = fTTTSpec;
@@ -681,6 +689,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		149593961715113F008A0BDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OCDSpec2;
+			targetProxy = 149593951715113F008A0BDD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		14FD18D5171318B8006DD78B /* InfoPlist.strings */ = {

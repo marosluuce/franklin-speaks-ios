@@ -14,20 +14,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "94A6BA5915BB2DE7003F22B6"
-               BuildableName = "libOCDSpec2.a"
-               BlueprintName = "OCDSpec2"
-               ReferencedContainer = "container:../OCDSpec2/OCDSpec2.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "14FD18FC171319CC006DD78B"
                BuildableName = "fTTTSpec.app"
                BlueprintName = "fTTTSpec"
