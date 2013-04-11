@@ -48,7 +48,6 @@
 		14FD1900171319CC006DD78B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FD18D0171318B8006DD78B /* CoreGraphics.framework */; };
 		14FD1906171319CC006DD78B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14FD1904171319CC006DD78B /* InfoPlist.strings */; };
 		14FD1908171319CC006DD78B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FD1907171319CC006DD78B /* main.m */; };
-		14FD190F17131A4F006DD78B /* InitialSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FD190E17131A4F006DD78B /* InitialSpec.m */; };
 		14FD191117131A93006DD78B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14FD191017131A93006DD78B /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -165,7 +164,6 @@
 		14FD1905171319CC006DD78B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		14FD1907171319CC006DD78B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		14FD1909171319CC006DD78B /* fTTTSpec-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fTTTSpec-Prefix.pch"; sourceTree = "<group>"; };
-		14FD190E17131A4F006DD78B /* InitialSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialSpec.m; sourceTree = "<group>"; };
 		14FD191017131A93006DD78B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		14FD191217131B39006DD78B /* OCDSpec2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OCDSpec2.xcodeproj; path = ../OCDSpec2/OCDSpec2.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -439,7 +437,6 @@
 			isa = PBXGroup;
 			children = (
 				14FD1902171319CC006DD78B /* Supporting Files */,
-				14FD190E17131A4F006DD78B /* InitialSpec.m */,
 			);
 			path = fTTTSpec;
 			sourceTree = "<group>";
@@ -694,7 +691,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				14FD1908171319CC006DD78B /* main.m in Sources */,
-				14FD190F17131A4F006DD78B /* InitialSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
