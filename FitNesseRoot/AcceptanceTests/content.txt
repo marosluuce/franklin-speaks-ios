@@ -3,5 +3,5 @@
 !define COMMAND_PATTERN {%m}
 !define SLIM_VERSION {0.0}
 
-^PlayerVsPlayerGame
-^GameOver
+{{{^PlayerVsPlayerGame
+^GameOver}}}

@@ -34,6 +34,14 @@
 		1429B9721714C2EF0016E094 /* Main.c in Sources */ = {isa = PBXBuildFile; fileRef = 1429B9711714C2EF0016E094 /* Main.c */; };
 		1477301F1716171F001BC4E8 /* TicTacToeGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1477301E1716171F001BC4E8 /* TicTacToeGame.m */; };
 		1488BC4A1715BFAB00191E70 /* libOCDSpec2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1488BC491715BFAB00191E70 /* libOCDSpec2.a */; };
+		14EAFB8D1717249000E5F09F /* BoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAFB8B1717248F00E5F09F /* BoardViewController.m */; };
+		14EAFB8E1717249000E5F09F /* BoardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14EAFB8C1717248F00E5F09F /* BoardViewController.xib */; };
+		14EAFB901717340500E5F09F /* FranklinAppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAFB8F1717340500E5F09F /* FranklinAppDelegateSpec.m */; };
+		14EAFB91171735EE00E5F09F /* FranklinAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14FD18DC171318B8006DD78B /* FranklinAppDelegate.m */; };
+		14EAFB921717373D00E5F09F /* BoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAFB8B1717248F00E5F09F /* BoardViewController.m */; };
+		14EAFB9417173BD000E5F09F /* ServerCommunicatorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAFB9317173BD000E5F09F /* ServerCommunicatorSpec.m */; };
+		14EAFB971717494800E5F09F /* ServerCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAFB961717494800E5F09F /* ServerCommunicator.m */; };
+		14EAFB981717494800E5F09F /* ServerCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAFB961717494800E5F09F /* ServerCommunicator.m */; };
 		14FD18CD171318B8006DD78B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FD18CC171318B8006DD78B /* UIKit.framework */; };
 		14FD18CF171318B8006DD78B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FD18CE171318B8006DD78B /* Foundation.framework */; };
 		14FD18D1171318B8006DD78B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FD18D0171318B8006DD78B /* CoreGraphics.framework */; };
@@ -146,6 +154,13 @@
 		1477301D1716171F001BC4E8 /* TicTacToeGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicTacToeGame.h; sourceTree = "<group>"; };
 		1477301E1716171F001BC4E8 /* TicTacToeGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicTacToeGame.m; sourceTree = "<group>"; };
 		1488BC491715BFAB00191E70 /* libOCDSpec2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCDSpec2.a; sourceTree = "<group>"; };
+		14EAFB8A1717248F00E5F09F /* BoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardViewController.h; sourceTree = "<group>"; };
+		14EAFB8B1717248F00E5F09F /* BoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardViewController.m; sourceTree = "<group>"; };
+		14EAFB8C1717248F00E5F09F /* BoardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardViewController.xib; sourceTree = "<group>"; };
+		14EAFB8F1717340500E5F09F /* FranklinAppDelegateSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FranklinAppDelegateSpec.m; sourceTree = "<group>"; };
+		14EAFB9317173BD000E5F09F /* ServerCommunicatorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerCommunicatorSpec.m; sourceTree = "<group>"; };
+		14EAFB951717494800E5F09F /* ServerCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerCommunicator.h; sourceTree = "<group>"; };
+		14EAFB961717494800E5F09F /* ServerCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerCommunicator.m; sourceTree = "<group>"; };
 		14FD18C9171318B8006DD78B /* fTTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fTTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FD18CC171318B8006DD78B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		14FD18CE171318B8006DD78B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -415,6 +430,11 @@
 				14FD18DB171318B8006DD78B /* FranklinAppDelegate.h */,
 				14FD18DC171318B8006DD78B /* FranklinAppDelegate.m */,
 				14FD18D3171318B8006DD78B /* Supporting Files */,
+				14EAFB8A1717248F00E5F09F /* BoardViewController.h */,
+				14EAFB8B1717248F00E5F09F /* BoardViewController.m */,
+				14EAFB8C1717248F00E5F09F /* BoardViewController.xib */,
+				14EAFB951717494800E5F09F /* ServerCommunicator.h */,
+				14EAFB961717494800E5F09F /* ServerCommunicator.m */,
 			);
 			path = fTTT;
 			sourceTree = "<group>";
@@ -437,6 +457,8 @@
 			isa = PBXGroup;
 			children = (
 				14FD1902171319CC006DD78B /* Supporting Files */,
+				14EAFB8F1717340500E5F09F /* FranklinAppDelegateSpec.m */,
+				14EAFB9317173BD000E5F09F /* ServerCommunicatorSpec.m */,
 			);
 			path = fTTTSpec;
 			sourceTree = "<group>";
@@ -604,6 +626,7 @@
 				14FD18DF171318B8006DD78B /* Default.png in Resources */,
 				14FD18E1171318B8006DD78B /* Default@2x.png in Resources */,
 				14FD18E3171318B8006DD78B /* Default-568h@2x.png in Resources */,
+				14EAFB8E1717249000E5F09F /* BoardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,6 +706,8 @@
 			files = (
 				14FD18D9171318B8006DD78B /* main.m in Sources */,
 				14FD18DD171318B8006DD78B /* FranklinAppDelegate.m in Sources */,
+				14EAFB8D1717249000E5F09F /* BoardViewController.m in Sources */,
+				14EAFB971717494800E5F09F /* ServerCommunicator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +716,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				14FD1908171319CC006DD78B /* main.m in Sources */,
+				14EAFB901717340500E5F09F /* FranklinAppDelegateSpec.m in Sources */,
+				14EAFB91171735EE00E5F09F /* FranklinAppDelegate.m in Sources */,
+				14EAFB921717373D00E5F09F /* BoardViewController.m in Sources */,
+				14EAFB9417173BD000E5F09F /* ServerCommunicatorSpec.m in Sources */,
+				14EAFB981717494800E5F09F /* ServerCommunicator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
