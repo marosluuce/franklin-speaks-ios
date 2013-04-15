@@ -1,0 +1,27 @@
+//
+//  TicTacToe.h
+//  fTTT
+//
+//  Created by Nathan Walker on 4/15/13.
+//  Copyright (c) 2013 Nathan Walker. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+#import "Communicator.h"
+#import "Square.h"
+
+@interface TicTacToe : NSObject
+
+@property (strong, nonatomic) id <Communicator> communicator;
+@property (strong, nonatomic) NSArray *squares;
+
+- (id)initWithCommunicator:(id <Communicator>)communicator;
+
+- (NSDictionary *)makeMove:(int)square;
+- (NSDictionary *)formatMove:(int)square;
+- (void)updateWithMove:(int)square;
+- (NSString *)squareIs:(int)square;
+- (void)updateSquare:(id <Square>)square;
+
+@end

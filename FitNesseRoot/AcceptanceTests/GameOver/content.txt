@@ -1,33 +1,34 @@
 Player 1 can win, player 2 can win, or it can be a draw.
+Player 1 is X and player 2 is O.
 
 !3 Player 1 Wins
 
-|script        |Tic Tac Toe Game  |
-|launch                           |
-|move to square|1                 |
-|move to square|4                 |
-|move to square|2                 |
-|move to square|5                 |
-|move to square|3                 |
-|check         |square   |1 |is |X|
-|check         |square   |2 |is |X|
-|check         |square   |3 |is |X|
-|check         |winner is|player 1|
+|script        |Tic Tac Toe Game|
+|launch                         |
+|move to square|1               |
+|move to square|4               |
+|move to square|2               |
+|move to square|5               |
+|move to square|3               |
+|check         |square   |1|is|X|
+|check         |square   |2|is|X|
+|check         |square   |3|is|X|
+|check         |winner is|X     |
 
 !3 Player 2 Wins
 
-|script        |Tic Tac Toe Game  |
-|launch                           |
-|move to square|1                 |
-|move to square|4                 |
-|move to square|2                 |
-|move to square|5                 |
-|move to square|9                 |
-|move to square|6                 |
-|check         |square   |4 |is |O|
-|check         |square   |5 |is |O|
-|check         |square   |6 |is |O|
-|check         |winner is|player 2|
+|script        |Tic Tac Toe Game|
+|launch                         |
+|move to square|1               |
+|move to square|4               |
+|move to square|2               |
+|move to square|5               |
+|move to square|9               |
+|move to square|6               |
+|check         |square   |4|is|O|
+|check         |square   |5|is|O|
+|check         |square   |6|is|O|
+|check         |winner is|O     |
 
 !3 Draw
 

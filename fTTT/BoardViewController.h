@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+#import "BoardSquare.h"
+#import "HttpConnector.h"
+#import "ServerCommunicator.h"
+#import "Square.h"
+#import "TicTacToe.h"
+
 @interface BoardViewController : UIViewController
 
+@property (strong, nonatomic) TicTacToe *game;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *squares;
 
 - (IBAction)touchSquare:(id)sender;

@@ -11,15 +11,16 @@
 @implementation TicTacToeGame
 
 - (void) launch {
-
+  id <Communicator> communicator = [[MockCommunicator alloc] init];
+  self.game = [[TicTacToe alloc] initWithCommunicator:communicator];
 }
 
-- (void) moveToSquare:(int)square {
-  
+- (void) moveToSquare:(NSString *)square {
+  [self.game updateWithMove:[square intValue]];
 }
 
-- (NSString*) squareIs:(int)square {
-  return nil;
+- (NSString*) squareIs:(NSString *)square {
+  return [self.game squareIs:[square intValue]];
 }
 
 @end

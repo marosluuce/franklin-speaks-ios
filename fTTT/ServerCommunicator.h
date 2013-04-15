@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 
 #import "Connector.h"
+#import "Communicator.h"
 
-@interface ServerCommunicator : NSObject
+@interface ServerCommunicator : NSObject <Communicator>
 
 @property (strong) NSURL *url;
 @property (strong) id <Connector> connector;
@@ -21,6 +22,5 @@
 - (NSURLRequest *)createRequest:(NSDictionary *)postData;
 - (NSData *)sendRequest:(NSURLRequest *)request withConnector:(id <Connector>)connector;
 - (NSDictionary *)parseDataToJson:(NSData *)data;
-- (NSDictionary *)communicate:(NSDictionary *)dict;
 
 @end

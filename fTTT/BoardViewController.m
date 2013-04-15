@@ -18,7 +18,10 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+      NSURL *url = [NSURL URLWithString:@"http://localhost:5000"];
+      HttpConnector *connector = [[HttpConnector alloc] init];
+      ServerCommunicator *communicator = [[ServerCommunicator alloc] initWithUrl:url andWithConnector:connector];
+      self.game = [[TicTacToe alloc] initWithCommunicator:communicator];
     }
     return self;
 }
@@ -36,8 +39,7 @@
 }
 
 - (IBAction)touchSquare:(id)sender {
-//  UIButton *button = (UIButton *) sender;
-//  NSString *tag = [NSString stringWithFormat:@"%d", button.tag];
-//  [button setTitle:tag forState:UIControlStateNormal & UIControlStateSelected & UIControlStateHighlighted];
+  id <Square> square = [[BoardSquare alloc] initWithButton:sender];
+  [self.game updateSquare:square];
 }
 @end
