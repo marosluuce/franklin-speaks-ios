@@ -8,13 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+#import "Connector.h"
+
 @interface ServerCommunicator : NSObject
 
 @property (strong) NSURL *url;
+@property (strong) id <Connector> connector;
 
-- (id)initWithUrl:(NSURL *)url;
+- (id)initWithUrl:(NSURL *)url andWithConnector:(id <Connector>)connector;
 
-+ (NSString *)dictionaryToQueryString:(NSDictionary *)dict;
+- (NSString *)dictionaryToQueryString:(NSDictionary *)dict;
 - (NSURLRequest *)createRequest:(NSDictionary *)postData;
+- (NSData *)sendRequest:(NSURLRequest *)request withConnector:(id <Connector>)connector;
+- (NSDictionary *)parseDataToJson:(NSData *)data;
+- (NSDictionary *)communicate:(NSDictionary *)dict;
 
 @end

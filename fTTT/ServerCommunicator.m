@@ -10,15 +10,16 @@
 
 @implementation ServerCommunicator
 
-- (id)initWithUrl:(NSURL *)url {
+- (id)initWithUrl:(NSURL *)url andWithConnector:(id<Connector>)connector{
   if (self = [super init]) {
     self.url = url;
+    self.connector = connector;
   }
   
   return self;
 }
 
-+ (NSString *)dictionaryToQueryString:(NSDictionary *)dict {
+- (NSString *)dictionaryToQueryString:(NSDictionary *)dict {
   NSMutableArray *items = [[NSMutableArray alloc] init];
   
   for (NSString *key in dict) {
@@ -33,9 +34,23 @@
   NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.url];
   
   request.HTTPMethod = @"POST";
-  request.HTTPBody = [[ServerCommunicator dictionaryToQueryString:postData] dataUsingEncoding:NSUTF8StringEncoding];
+  request.HTTPBody = [[self dictionaryToQueryString:postData] dataUsingEncoding:NSUTF8StringEncoding];
   
   return request;
+}
+
+- (NSData *)sendRequest:(NSURLRequest *)request withConnector:(id<Connector>)connector {
+  return [connector send:request];
+}
+
+- (NSDictionary *)parseDataToJson:(NSData *)data {
+  return [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+}
+
+- (NSDictionary *)communicate:(NSDictionary *)dict {
+  NSURLRequest *request = [self createRequest:dict];
+  NSData *data = [self sendRequest:request withConnector:self.connector];
+  return [self parseDataToJson:data];
 }
 
 @end

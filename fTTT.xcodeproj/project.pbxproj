@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1409FD7B1718527F00AE4801 /* MockHttpConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1409FD7A1718527F00AE4801 /* MockHttpConnector.m */; };
+		1409FD8017185B4500AE4801 /* HttpConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1409FD7F17185B4500AE4801 /* HttpConnector.m */; };
 		1429B9221714C2EF0016E094 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FD18CC171318B8006DD78B /* UIKit.framework */; };
 		1429B9231714C2EF0016E094 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FD18CE171318B8006DD78B /* Foundation.framework */; };
 		1429B9291714C2EF0016E094 /* SocketServer.c in Sources */ = {isa = PBXBuildFile; fileRef = 1429B9281714C2EF0016E094 /* SocketServer.c */; };
@@ -98,6 +100,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1409FD791718527F00AE4801 /* MockHttpConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockHttpConnector.h; sourceTree = "<group>"; };
+		1409FD7A1718527F00AE4801 /* MockHttpConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockHttpConnector.m; sourceTree = "<group>"; };
+		1409FD7D171852D700AE4801 /* Connector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connector.h; sourceTree = "<group>"; };
+		1409FD7E17185B4500AE4801 /* HttpConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpConnector.h; sourceTree = "<group>"; };
+		1409FD7F17185B4500AE4801 /* HttpConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpConnector.m; sourceTree = "<group>"; };
 		1429B9211714C2EF0016E094 /* AcceptanceTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcceptanceTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1429B9281714C2EF0016E094 /* SocketServer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = SocketServer.c; path = cslim/src/Com/SocketServer.c; sourceTree = "<group>"; };
 		1429B92A1714C2EF0016E094 /* TcpComLink.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = TcpComLink.c; path = cslim/src/Com/TcpComLink.c; sourceTree = "<group>"; };
@@ -217,6 +224,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1409FD751718524D00AE4801 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				1409FD791718527F00AE4801 /* MockHttpConnector.h */,
+				1409FD7A1718527F00AE4801 /* MockHttpConnector.m */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
 		1429B9241714C2EF0016E094 /* AcceptanceTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,6 +451,9 @@
 				14EAFB8C1717248F00E5F09F /* BoardViewController.xib */,
 				14EAFB951717494800E5F09F /* ServerCommunicator.h */,
 				14EAFB961717494800E5F09F /* ServerCommunicator.m */,
+				1409FD7D171852D700AE4801 /* Connector.h */,
+				1409FD7E17185B4500AE4801 /* HttpConnector.h */,
+				1409FD7F17185B4500AE4801 /* HttpConnector.m */,
 			);
 			path = fTTT;
 			sourceTree = "<group>";
@@ -456,6 +475,7 @@
 		14FD1901171319CC006DD78B /* fTTTSpec */ = {
 			isa = PBXGroup;
 			children = (
+				1409FD751718524D00AE4801 /* Mocks */,
 				14FD1902171319CC006DD78B /* Supporting Files */,
 				14EAFB8F1717340500E5F09F /* FranklinAppDelegateSpec.m */,
 				14EAFB9317173BD000E5F09F /* ServerCommunicatorSpec.m */,
@@ -708,6 +728,7 @@
 				14FD18DD171318B8006DD78B /* FranklinAppDelegate.m in Sources */,
 				14EAFB8D1717249000E5F09F /* BoardViewController.m in Sources */,
 				14EAFB971717494800E5F09F /* ServerCommunicator.m in Sources */,
+				1409FD8017185B4500AE4801 /* HttpConnector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,6 +742,7 @@
 				14EAFB921717373D00E5F09F /* BoardViewController.m in Sources */,
 				14EAFB9417173BD000E5F09F /* ServerCommunicatorSpec.m in Sources */,
 				14EAFB981717494800E5F09F /* ServerCommunicator.m in Sources */,
+				1409FD7B1718527F00AE4801 /* MockHttpConnector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
