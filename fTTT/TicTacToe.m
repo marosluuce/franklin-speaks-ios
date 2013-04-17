@@ -14,6 +14,8 @@
   if (self = [super init]) {
     self.communicator = communicator;
     self.squares = @[@"", @"", @"", @"", @"", @"", @"", @"", @""];
+    self.winner = @"";
+    self.gameover = NO;
   }
   
   return self;
@@ -28,9 +30,13 @@
   return @{@"square": string};
 }
 
-- (void)updateWithMove:(int)square {
-  NSDictionary *result = [self makeMove:square];
-  self.squares = [result objectForKey:@"squares"];
+- (void)moveAndUpdateGame:(int)square {
+  if (!self.gameover) {
+    NSDictionary *result = [self makeMove:square];
+    self.squares = [result objectForKey:@"squares"];
+    self.winner = [result objectForKey:@"winner"];
+    self.gameover = [[result objectForKey:@"gameover"] boolValue];
+  }
 }
 
 - (NSString *)squareIs:(int)square {
@@ -38,8 +44,27 @@
 }
 
 - (void)updateSquare:(id<Square>)square {
-  [self updateWithMove:[square number]];
+  [self moveAndUpdateGame:[square number]];
   [square setValue:[self squareIs:square.number]];
+}
+
+- (NSString *)gameOverMessage {
+  NSString *message = @"";
+  
+  if (self.gameover == YES && [self.winner isEqualToString:@""]) {
+    message = @"Draw!";
+  }
+  else if (self.gameover == YES) {
+    message = [NSString stringWithFormat:@"%@ Won!", [self.winner uppercaseString]];
+  }
+  
+  return message;
+}
+
+- (void)updateView:(id <BoardView>)view {
+  if (self.gameover) {
+    [view alertGameOver];
+  }
 }
 
 @end

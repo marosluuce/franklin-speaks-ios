@@ -15,5 +15,8 @@
 @property (strong, nonatomic) NSMutableArray *squares;
 
 - (NSString *)flipFlopXO;
+- (NSString *)winner;
+- (BOOL)full;
+- (BOOL)gameover;
 
 @end

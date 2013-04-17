@@ -23,6 +23,7 @@
       ServerCommunicator *communicator = [[ServerCommunicator alloc] initWithUrl:url andWithConnector:connector];
       self.game = [[TicTacToe alloc] initWithCommunicator:communicator];
     }
+  
     return self;
 }
 
@@ -41,5 +42,17 @@
 - (IBAction)touchSquare:(id)sender {
   id <Square> square = [[BoardSquare alloc] initWithButton:sender];
   [self.game updateSquare:square];
+  [self.game updateView:self];
 }
+
+- (void)alertGameOver {
+  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Game Over"
+                                                  message:[self.game gameOverMessage]
+                                                 delegate:nil
+                                        cancelButtonTitle:@"Ok"
+                                        otherButtonTitles:nil];
+  
+  [alert show];
+}
+
 @end

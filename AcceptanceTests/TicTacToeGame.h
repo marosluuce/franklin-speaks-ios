@@ -17,8 +17,10 @@
 
 @property (strong) TicTacToe *game;
 
-- (void) launch;
-- (void) moveToSquare:(NSString *)square;
-- (NSString*) squareIs:(NSString *)square;
+- (void)launch;
+- (void)moveToSquare:(NSString *)square;
+- (NSString *)squareIs:(NSString *)square;
+- (NSString *)winnerIs;
+- (BOOL)gameIsDraw;
 
 @end

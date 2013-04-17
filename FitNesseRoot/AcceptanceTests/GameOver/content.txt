@@ -37,10 +37,10 @@ Player 1 is X and player 2 is O.
 |move to square|1               |
 |move to square|2               |
 |move to square|3               |
-|move to square|4               |
-|move to square|7               |
-|move to square|6               |
 |move to square|9               |
-|move to square|8               |
+|move to square|6               |
 |move to square|5               |
-|ensure        |game is  |draw  |
+|move to square|7               |
+|move to square|4               |
+|move to square|8               |
+|ensure        |game is draw    |

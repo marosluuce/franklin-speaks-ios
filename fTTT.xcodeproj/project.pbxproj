@@ -36,6 +36,7 @@
 		1429B9721714C2EF0016E094 /* Main.c in Sources */ = {isa = PBXBuildFile; fileRef = 1429B9711714C2EF0016E094 /* Main.c */; };
 		1477301F1716171F001BC4E8 /* TicTacToeGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1477301E1716171F001BC4E8 /* TicTacToeGame.m */; };
 		1488BC4A1715BFAB00191E70 /* libOCDSpec2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1488BC491715BFAB00191E70 /* libOCDSpec2.a */; };
+		14B19444171F14E400BE10D2 /* MockBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B19443171F14E400BE10D2 /* MockBoardViewController.m */; };
 		14EAFB8D1717249000E5F09F /* BoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAFB8B1717248F00E5F09F /* BoardViewController.m */; };
 		14EAFB8E1717249000E5F09F /* BoardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14EAFB8C1717248F00E5F09F /* BoardViewController.xib */; };
 		14EAFB901717340500E5F09F /* FranklinAppDelegateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAFB8F1717340500E5F09F /* FranklinAppDelegateSpec.m */; };
@@ -173,6 +174,9 @@
 		1477301D1716171F001BC4E8 /* TicTacToeGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicTacToeGame.h; sourceTree = "<group>"; };
 		1477301E1716171F001BC4E8 /* TicTacToeGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicTacToeGame.m; sourceTree = "<group>"; };
 		1488BC491715BFAB00191E70 /* libOCDSpec2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCDSpec2.a; sourceTree = "<group>"; };
+		14B19442171F14E400BE10D2 /* MockBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockBoardViewController.h; sourceTree = "<group>"; };
+		14B19443171F14E400BE10D2 /* MockBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockBoardViewController.m; sourceTree = "<group>"; };
+		14B19448171F15B400BE10D2 /* BoardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoardView.h; sourceTree = "<group>"; };
 		14EAFB8A1717248F00E5F09F /* BoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardViewController.h; sourceTree = "<group>"; };
 		14EAFB8B1717248F00E5F09F /* BoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardViewController.m; sourceTree = "<group>"; };
 		14EAFB8C1717248F00E5F09F /* BoardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardViewController.xib; sourceTree = "<group>"; };
@@ -256,6 +260,8 @@
 				14EC663D171C49B0008DED05 /* MockCommunicator.m */,
 				14EC664A171C7D9D008DED05 /* MockSquare.h */,
 				14EC664B171C7D9D008DED05 /* MockSquare.m */,
+				14B19442171F14E400BE10D2 /* MockBoardViewController.h */,
+				14B19443171F14E400BE10D2 /* MockBoardViewController.m */,
 			);
 			name = Mocks;
 			sourceTree = "<group>";
@@ -495,6 +501,7 @@
 				14EC6645171C7D82008DED05 /* Square.h */,
 				14EC6646171C7D91008DED05 /* BoardSquare.h */,
 				14EC6647171C7D91008DED05 /* BoardSquare.m */,
+				14B19448171F15B400BE10D2 /* BoardView.h */,
 			);
 			path = fTTT;
 			sourceTree = "<group>";
@@ -797,6 +804,7 @@
 				14EC6643171C7311008DED05 /* HttpConnector.m in Sources */,
 				14EC6649171C7D91008DED05 /* BoardSquare.m in Sources */,
 				14EC664E171C7DAD008DED05 /* MockSquare.m in Sources */,
+				14B19444171F14E400BE10D2 /* MockBoardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

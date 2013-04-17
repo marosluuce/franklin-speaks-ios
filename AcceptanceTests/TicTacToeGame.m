@@ -10,17 +10,25 @@
 
 @implementation TicTacToeGame
 
-- (void) launch {
+- (void)launch {
   id <Communicator> communicator = [[MockCommunicator alloc] init];
   self.game = [[TicTacToe alloc] initWithCommunicator:communicator];
 }
 
-- (void) moveToSquare:(NSString *)square {
-  [self.game updateWithMove:[square intValue]];
+- (void)moveToSquare:(NSString *)square {
+  [self.game moveAndUpdateGame:[square intValue]];
 }
 
-- (NSString*) squareIs:(NSString *)square {
+- (NSString *)squareIs:(NSString *)square {
   return [self.game squareIs:[square intValue]];
+}
+
+- (NSString *)winnerIs {
+  return self.game.winner;
+}
+
+- (BOOL)gameIsDraw {
+  return self.game.gameover && self.game.winner == @"";
 }
 
 @end
