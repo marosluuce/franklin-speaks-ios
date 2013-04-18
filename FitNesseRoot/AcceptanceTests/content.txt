@@ -5,3 +5,4 @@
 
 ^PlayerVsPlayerGame
 ^GameOver
+^NewGame

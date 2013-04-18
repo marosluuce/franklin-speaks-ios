@@ -1,0 +1,29 @@
+When the game is over, the alert message should have a New Game button (not an OK) and should start a new game when you press it.
+
+!3 Play a complete game
+
+|script        |Tic Tac Toe Game|
+|launch                         |
+|move to square|1               |
+|move to square|4               |
+|move to square|2               |
+|move to square|5               |
+|move to square|3               |
+
+!3 Click the OK button
+
+|script                      |
+|ensure|game over alert shows|
+|tap new game                |
+
+!3 Make sure you can play again
+It should start again with X - player 1.
+
+|script                          |
+|check         |square|1|is|blank|
+|check         |square|2|is|blank|
+|check         |square|3|is|blank|
+|check         |square|4|is|blank|
+|check         |square|5|is|blank|
+|move to square|1                |
+|check         |square|1|is|X    |
