@@ -19,11 +19,11 @@ When the game is over, the alert message should have a New Game button (not an O
 !3 Make sure you can play again
 It should start again with X - player 1.
 
-|script                          |
-|check         |square|1|is|blank|
-|check         |square|2|is|blank|
-|check         |square|3|is|blank|
-|check         |square|4|is|blank|
-|check         |square|5|is|blank|
-|move to square|1                |
-|check         |square|1|is|X    |
+|script                      |
+|check         |square|1|is| |
+|check         |square|2|is| |
+|check         |square|3|is| |
+|check         |square|4|is| |
+|check         |square|5|is| |
+|move to square|1            |
+|check         |square|1|is|X|

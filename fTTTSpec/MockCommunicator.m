@@ -14,19 +14,24 @@
 
 - (id)init {
   if (self = [super init]) {
-    self.squares = [[NSMutableArray alloc] initWithObjects:@"", @"", @"", @"", @"", @"", @"", @"", @"", nil];
+    [self newGame];
+    self.lastRequest = nil;
   }
   
   return self;
 }
 
 - (NSDictionary *)communicate:(NSDictionary *)dict {
-  int index = [[dict objectForKey:@"square"] intValue] - 1;
-  [self.squares setObject:[self flipFlopXO] atIndexedSubscript:index];
-  return @{@"squares": self.squares,
-           @"winner": [self winner],
-           @"gameover": [NSNumber numberWithBool:[self gameover]],
-          };
+  self.lastRequest = dict;
+  
+  if ([dict objectForKey:@"square"]) {
+    int index = [[dict objectForKey:@"square"] intValue] - 1;
+    [self.squares setObject:[self flipFlopXO] atIndexedSubscript:index];
+  }
+  else if ([dict objectForKey:@"newgame"]) {
+    [self newGame];
+  }
+  return [self gameState];
 }
 
 - (NSString *)flipFlopXO {
@@ -78,6 +83,17 @@
 
 - (BOOL)gameover {
   return [self full] || ![[self winner] isEqualToString:@""];
+}
+
+- (void)newGame {
+  self.squares = [[NSMutableArray alloc] initWithObjects:@"", @"", @"", @"", @"", @"", @"", @"", @"", nil];
+}
+
+- (NSDictionary *)gameState {
+  return @{@"squares": self.squares,
+           @"winner": [self winner],
+           @"gameover": [NSNumber numberWithBool:[self gameover]],
+          };
 }
 
 @end

@@ -9,11 +9,13 @@
 #import <Foundation/Foundation.h>
 
 #import "BoardView.h"
+#import "MockSquare.h"
 
 @interface MockBoardViewController : NSObject <BoardView>
 
 @property BOOL gameOverAlertCalled;
+@property (strong, nonatomic) NSArray *squares;
 
-- (void)alertGameOver;
+- (NSArray *)createSquares;
 
 @end

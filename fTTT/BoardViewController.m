@@ -18,10 +18,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-      NSURL *url = [NSURL URLWithString:@"http://localhost:5000"];
-      HttpConnector *connector = [[HttpConnector alloc] init];
-      ServerCommunicator *communicator = [[ServerCommunicator alloc] initWithUrl:url andWithConnector:connector];
-      self.game = [[TicTacToe alloc] initWithCommunicator:communicator];
+      
+      self.interactor = [TicTacToeInteractor newInteractorWithGame:self];
     }
   
     return self;
@@ -30,7 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.squares = [self buttonsToSquares:self.buttons];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,19 +38,32 @@
 }
 
 - (IBAction)touchSquare:(id)sender {
-  id <Square> square = [[BoardSquare alloc] initWithButton:sender];
-  [self.game updateSquare:square];
-  [self.game updateView:self];
+  [self.interactor doMove:[sender tag] withView:self];
 }
 
 - (void)alertGameOver {
   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Game Over"
-                                                  message:[self.game gameOverMessage]
-                                                 delegate:nil
-                                        cancelButtonTitle:@"Ok"
+                                                  message:[self.interactor gameOverMessage]
+                                                 delegate:self
+                                        cancelButtonTitle:@"New Game"
                                         otherButtonTitles:nil];
   
   [alert show];
+}
+
+- (NSArray *)buttonsToSquares:(NSArray *)buttons {
+  NSMutableArray *squares = [[NSMutableArray alloc] init];
+  
+  for (id button in buttons) {
+    id <Square> square = [[BoardSquare alloc] initWithButton:button];
+    [squares addObject:square];
+  }
+  
+  return squares;
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+  [self.interactor newGame:self];
 }
 
 @end

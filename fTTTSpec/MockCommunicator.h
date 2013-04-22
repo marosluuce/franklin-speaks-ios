@@ -13,10 +13,13 @@
 @interface MockCommunicator : NSObject <Communicator>
 
 @property (strong, nonatomic) NSMutableArray *squares;
+@property (strong, nonatomic) NSDictionary *lastRequest;
 
 - (NSString *)flipFlopXO;
 - (NSString *)winner;
 - (BOOL)full;
 - (BOOL)gameover;
+- (void)newGame;
+- (NSDictionary *)gameState;
 
 @end

@@ -21,12 +21,9 @@
 
 - (id)initWithCommunicator:(id <Communicator>)communicator;
 
-- (NSDictionary *)makeMove:(int)square;
-- (NSDictionary *)formatMove:(int)square;
-- (void)moveAndUpdateGame:(int)square;
+- (void)communicate:(NSDictionary *)message;
+- (void)updateGame:(NSDictionary *)result;
 - (NSString *)squareIs:(int)square;
-- (void)updateSquare:(id <Square>)square;
-- (NSString *)gameOverMessage;
-- (void)updateView:(id <BoardView>)view;
+- (BOOL)isDraw;
 
 @end

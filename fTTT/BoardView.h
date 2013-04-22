@@ -10,6 +10,8 @@
 
 @protocol BoardView <NSObject>
 
+@property (strong, nonatomic) NSArray *squares;
+
 - (void)alertGameOver;
 
 @end

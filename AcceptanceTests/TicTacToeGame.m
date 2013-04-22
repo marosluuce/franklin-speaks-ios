@@ -13,10 +13,13 @@
 - (void)launch {
   id <Communicator> communicator = [[MockCommunicator alloc] init];
   self.game = [[TicTacToe alloc] initWithCommunicator:communicator];
+  self.view = [[MockBoardViewController alloc] init];
+  self.interactor = [[TicTacToeInteractor alloc] initWithGame:self.game withView:self.view];
+
 }
 
 - (void)moveToSquare:(NSString *)square {
-  [self.game moveAndUpdateGame:[square intValue]];
+  [self.interactor doMove:[square intValue] withView: self.view];
 }
 
 - (NSString *)squareIs:(NSString *)square {
@@ -28,7 +31,15 @@
 }
 
 - (BOOL)gameIsDraw {
-  return self.game.gameover && self.game.winner == @"";
+  return [self.game isDraw];
+}
+
+- (BOOL)gameOverAlertShows {
+  return self.view.gameOverAlertCalled;
+}
+
+- (void)tapNewGame {
+  [self.interactor newGame:self.view];
 }
 
 @end

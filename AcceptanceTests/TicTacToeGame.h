@@ -11,16 +11,22 @@
 #import "Communicator.h"
 #import "Connector.h"
 #import "MockCommunicator.h"
+#import "MockBoardViewController.h"
 #import "TicTacToe.h"
+#import "TicTacToeInteractor.h"
 
 @interface TicTacToeGame : NSObject
 
-@property (strong) TicTacToe *game;
+@property (strong, nonatomic) TicTacToe *game;
+@property (strong, nonatomic) TicTacToeInteractor *interactor;
+@property (strong, nonatomic) MockBoardViewController *view;
 
 - (void)launch;
 - (void)moveToSquare:(NSString *)square;
 - (NSString *)squareIs:(NSString *)square;
 - (NSString *)winnerIs;
 - (BOOL)gameIsDraw;
+- (BOOL)gameOverAlertShows;
+- (void)tapNewGame;
 
 @end

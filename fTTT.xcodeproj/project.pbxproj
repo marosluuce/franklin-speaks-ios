@@ -34,6 +34,12 @@
 		1429B96E1714C2EF0016E094 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1429B96D1714C2EF0016E094 /* InfoPlist.strings */; };
 		1429B9701714C2EF0016E094 /* iPhone-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 1429B96F1714C2EF0016E094 /* iPhone-Prefix.pch */; };
 		1429B9721714C2EF0016E094 /* Main.c in Sources */ = {isa = PBXBuildFile; fileRef = 1429B9711714C2EF0016E094 /* Main.c */; };
+		1433B2BC17204FF6006D70AF /* MockBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B19443171F14E400BE10D2 /* MockBoardViewController.m */; };
+		1433B2C21720544D006D70AF /* TicTacToeInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1433B2C11720544D006D70AF /* TicTacToeInteractor.m */; };
+		1433B2C31720544D006D70AF /* TicTacToeInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1433B2C11720544D006D70AF /* TicTacToeInteractor.m */; };
+		1433B2C41720544D006D70AF /* TicTacToeInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1433B2C11720544D006D70AF /* TicTacToeInteractor.m */; };
+		1433B2C617205599006D70AF /* TicTacToeInteractorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1433B2C517205599006D70AF /* TicTacToeInteractorSpec.m */; };
+		146DFCFB1720973E0048D2EE /* MockSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EC664B171C7D9D008DED05 /* MockSquare.m */; };
 		1477301F1716171F001BC4E8 /* TicTacToeGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 1477301E1716171F001BC4E8 /* TicTacToeGame.m */; };
 		1488BC4A1715BFAB00191E70 /* libOCDSpec2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1488BC491715BFAB00191E70 /* libOCDSpec2.a */; };
 		14B19444171F14E400BE10D2 /* MockBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B19443171F14E400BE10D2 /* MockBoardViewController.m */; };
@@ -171,6 +177,9 @@
 		1429B97A1714C2EF0016E094 /* RunSlimTestsTargetWithSlimPort */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = RunSlimTestsTargetWithSlimPort; path = ../bin/iOS/RunSlimTestsTargetWithSlimPort; sourceTree = "<group>"; };
 		1429B97B1714C2EF0016E094 /* content.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = content.txt; path = ../example_tests/content.txt; sourceTree = "<group>"; };
 		1429B97C1714C2EF0016E094 /* properties.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = properties.xml; path = ../example_tests/properties.xml; sourceTree = "<group>"; };
+		1433B2C01720544D006D70AF /* TicTacToeInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicTacToeInteractor.h; sourceTree = "<group>"; };
+		1433B2C11720544D006D70AF /* TicTacToeInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicTacToeInteractor.m; sourceTree = "<group>"; };
+		1433B2C517205599006D70AF /* TicTacToeInteractorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicTacToeInteractorSpec.m; sourceTree = "<group>"; };
 		1477301D1716171F001BC4E8 /* TicTacToeGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicTacToeGame.h; sourceTree = "<group>"; };
 		1477301E1716171F001BC4E8 /* TicTacToeGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicTacToeGame.m; sourceTree = "<group>"; };
 		1488BC491715BFAB00191E70 /* libOCDSpec2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCDSpec2.a; sourceTree = "<group>"; };
@@ -498,6 +507,8 @@
 				14EC6633171C4625008DED05 /* Communication */,
 				14EC6637171C4753008DED05 /* TicTacToe.h */,
 				14EC6638171C4753008DED05 /* TicTacToe.m */,
+				1433B2C01720544D006D70AF /* TicTacToeInteractor.h */,
+				1433B2C11720544D006D70AF /* TicTacToeInteractor.m */,
 				14EC6645171C7D82008DED05 /* Square.h */,
 				14EC6646171C7D91008DED05 /* BoardSquare.h */,
 				14EC6647171C7D91008DED05 /* BoardSquare.m */,
@@ -528,6 +539,7 @@
 				14EAFB8F1717340500E5F09F /* FranklinAppDelegateSpec.m */,
 				14EAFB9317173BD000E5F09F /* ServerCommunicatorSpec.m */,
 				14EC663F171C5ADC008DED05 /* TicTacToeSpec.m */,
+				1433B2C517205599006D70AF /* TicTacToeInteractorSpec.m */,
 			);
 			path = fTTTSpec;
 			sourceTree = "<group>";
@@ -770,6 +782,9 @@
 				14EC6642171C7310008DED05 /* HttpConnector.m in Sources */,
 				14EC6644171C7314008DED05 /* ServerCommunicator.m in Sources */,
 				14EC6652171C9AF3008DED05 /* MockCommunicator.m in Sources */,
+				1433B2BC17204FF6006D70AF /* MockBoardViewController.m in Sources */,
+				1433B2C41720544D006D70AF /* TicTacToeInteractor.m in Sources */,
+				146DFCFB1720973E0048D2EE /* MockSquare.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,6 +799,7 @@
 				1409FD8017185B4500AE4801 /* HttpConnector.m in Sources */,
 				14EC6639171C4753008DED05 /* TicTacToe.m in Sources */,
 				14EC6648171C7D91008DED05 /* BoardSquare.m in Sources */,
+				1433B2C21720544D006D70AF /* TicTacToeInteractor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,6 +821,8 @@
 				14EC6649171C7D91008DED05 /* BoardSquare.m in Sources */,
 				14EC664E171C7DAD008DED05 /* MockSquare.m in Sources */,
 				14B19444171F14E400BE10D2 /* MockBoardViewController.m in Sources */,
+				1433B2C31720544D006D70AF /* TicTacToeInteractor.m in Sources */,
+				1433B2C617205599006D70AF /* TicTacToeInteractorSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -886,8 +904,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nathan Walker (WKMWCG8E9U)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nathan Walker (WKMWCG8E9U)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -902,6 +920,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "67CFE001-9159-460E-B635-53D8966E1449";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "67CFE001-9159-460E-B635-53D8966E1449";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -919,8 +939,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nathan Walker (WKMWCG8E9U)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nathan Walker (WKMWCG8E9U)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -928,6 +948,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "67CFE001-9159-460E-B635-53D8966E1449";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "67CFE001-9159-460E-B635-53D8966E1449";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -961,6 +983,7 @@
 			buildSettings = {
 				ADDITIONAL_SDKS = "";
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fTTTSpec/fTTTSpec-Prefix.pch";
@@ -982,6 +1005,7 @@
 			buildSettings = {
 				ADDITIONAL_SDKS = "";
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fTTTSpec/fTTTSpec-Prefix.pch";
