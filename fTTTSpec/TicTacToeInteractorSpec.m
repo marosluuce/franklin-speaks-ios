@@ -21,16 +21,6 @@ OCDSpec2Context(TicTacToeInteractorSpec) {
     interactor = [[TicTacToeInteractor alloc] initWithGame:game withView:view];
   });
   
-  Describe(@"+newInteractorWithGame", ^{
-    
-    It(@"is a TicTacToeInteractor", ^{
-      interactor = [TicTacToeInteractor newInteractorWithGame:view];
-      
-      [ExpectObj(interactor) toBeKindOfClass:[TicTacToeInteractor class]];
-    });
-    
-  });
-  
   Describe(@"-initWithGame", ^{
     
     It(@"sends a newgame command", ^{

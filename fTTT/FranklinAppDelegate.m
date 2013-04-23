@@ -11,11 +11,22 @@
 
 @implementation FranklinAppDelegate
 
+- (id)init {
+  return [self initWithController:[BoardViewController new]];
+}
+
+- (id)initWithController:(UIViewController *)controller {
+  if (self = [super init]) {
+    self.controller = controller;
+  }
+  
+  return self;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  // Override point for customization after application launch.
-  self.window.rootViewController = [[BoardViewController alloc] init];
+  self.window.rootViewController = self.controller;
 
   self.window.backgroundColor = [UIColor whiteColor];
   [self.window makeKeyAndVisible];

@@ -11,5 +11,9 @@
 @interface FranklinAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UIViewController *controller;
+
+- (id)init;
+- (id)initWithController:(UIViewController *)controller;
 
 @end

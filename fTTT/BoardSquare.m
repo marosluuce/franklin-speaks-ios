@@ -19,6 +19,7 @@
 }
 
 - (void)setValue:(NSString *)value {
+  value = [value uppercaseString];
   [self.button setTitle:value forState:UIControlStateNormal & UIControlStateSelected & UIControlStateHighlighted];
 }
 
