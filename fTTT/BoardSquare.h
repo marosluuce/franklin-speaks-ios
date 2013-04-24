@@ -15,5 +15,6 @@
 @property (strong, nonatomic) UIButton *button;
 
 - (id)initWithButton:(UIButton *)button;
+- (void)setColorBasedOnSymbol:(NSString *)symbol;
 
 @end
