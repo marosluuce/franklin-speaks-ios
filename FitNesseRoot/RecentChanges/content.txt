@@ -1,3 +1,4 @@
+|AcceptanceTests.ShowTheCurrentPlayer||12:06:58 Mon, Apr 29, 2013|
 |AcceptanceTests.NewGame||15:22:47 Mon, Apr 22, 2013|
 |AcceptanceTests||10:03:08 Thu, Apr 18, 2013|
 |AcceptanceTests.GameOver||13:17:21 Wed, Apr 17, 2013|
