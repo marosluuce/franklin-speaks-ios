@@ -15,6 +15,7 @@
 
 @property BOOL gameOverAlertCalled;
 @property (strong, nonatomic) NSArray *squares;
+@property (strong, nonatomic) NSString *currentPlayerString;
 
 - (NSArray *)createSquares;
 

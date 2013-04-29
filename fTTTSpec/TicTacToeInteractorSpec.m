@@ -15,9 +15,9 @@ OCDSpec2Context(TicTacToeInteractorSpec) {
   __block MockCommunicator *communicator;
   
   BeforeEach(^{
-    communicator = [[MockCommunicator alloc] init];
+    communicator = [MockCommunicator new];
     game = [[TicTacToe alloc] initWithCommunicator:communicator];
-    view = [[MockBoardViewController alloc] init];
+    view = [MockBoardViewController new];
     interactor = [[TicTacToeInteractor alloc] initWithGame:game withView:view];
   });
   
@@ -54,6 +54,13 @@ OCDSpec2Context(TicTacToeInteractorSpec) {
         MockSquare *square = [view.squares objectAtIndex:i];
         [ExpectObj([square value]) toBeEqualTo:[game.squares objectAtIndex:i]];
       }
+    });
+    
+    It(@"updates the current player", ^{
+      game.currentplayer = @"Player X";
+      [interactor updateView:view];
+      
+      [ExpectObj(view.currentPlayerString) toBeEqualTo:@"Player X"];
     });
     
   });

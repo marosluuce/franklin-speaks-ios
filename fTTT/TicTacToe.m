@@ -16,6 +16,7 @@
     self.squares = @[@"", @"", @"", @"", @"", @"", @"", @"", @""];
     self.winner = @"";
     self.gameover = NO;
+    self.currentplayer = @"";
   }
   
   return self;
@@ -30,6 +31,7 @@
   self.squares = [result objectForKey:@"squares"];
   self.winner = [result objectForKey:@"winner"];
   self.gameover = [[result objectForKey:@"gameover"] boolValue];
+  self.currentplayer = [result objectForKey:@"currentplayer"];
 }
 
 - (NSString *)squareIs:(int)square {

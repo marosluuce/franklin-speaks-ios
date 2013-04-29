@@ -11,11 +11,10 @@
 @implementation TicTacToeGame
 
 - (void)launch {
-  id <Communicator> communicator = [[MockCommunicator alloc] init];
+  id <Communicator> communicator = [MockCommunicator new];
   self.game = [[TicTacToe alloc] initWithCommunicator:communicator];
-  self.view = [[MockBoardViewController alloc] init];
+  self.view = [MockBoardViewController new];
   self.interactor = [[TicTacToeInteractor alloc] initWithGame:self.game withView:self.view];
-
 }
 
 - (void)moveToSquare:(NSString *)square {
@@ -40,6 +39,10 @@
 
 - (void)tapNewGame {
   [self.interactor newGame:self.view];
+}
+
+- (NSString *)currentPlayer {
+  return self.view.currentPlayerString;
 }
 
 @end

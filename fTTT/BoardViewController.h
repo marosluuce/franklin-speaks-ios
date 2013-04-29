@@ -18,6 +18,7 @@
 @property (strong, nonatomic) TicTacToeInteractor *interactor;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
 @property (strong, nonatomic) NSArray *squares;
+@property (strong, nonatomic) IBOutlet UILabel *currentPlayerLabel;
 
 - (IBAction)touchSquare:(id)sender;
 - (void)alertGameOver;

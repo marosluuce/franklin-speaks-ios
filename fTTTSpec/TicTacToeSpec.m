@@ -10,7 +10,7 @@ OCDSpec2Context(TicTacToeSpec) {
   __block MockCommunicator *communicator;
   
   BeforeEach(^{
-    communicator = [[MockCommunicator alloc] init];
+    communicator = [MockCommunicator new];
     game = [[TicTacToe alloc] initWithCommunicator:communicator];
   });
   
@@ -73,7 +73,8 @@ OCDSpec2Context(TicTacToeSpec) {
     It(@"updates the game state variables", ^{
       NSDictionary *result = @{@"squares": @[],
                                @"winner": @"junk",
-                               @"gameover": @1};
+                               @"gameover": @1,
+                               @"currentplayer": @"x"};
       [game updateGame:result];
       for (NSString *key in result) {
         [ExpectObj([game valueForKey:key]) toBeEqualTo:[result objectForKey:key]];

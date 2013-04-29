@@ -17,6 +17,7 @@
 @property (strong, nonatomic) id <Communicator> communicator;
 @property (strong, nonatomic) NSArray *squares;
 @property (strong, nonatomic) NSString *winner;
+@property (strong, nonatomic) NSString *currentplayer;
 @property BOOL gameover;
 
 - (id)initWithCommunicator:(id <Communicator>)communicator;

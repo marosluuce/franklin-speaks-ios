@@ -93,6 +93,7 @@
   return @{@"squares": self.squares,
            @"winner": [self winner],
            @"gameover": [NSNumber numberWithBool:[self gameover]],
+           @"currentplayer": [NSString stringWithFormat:@"Player %@", [self flipFlopXO]],
           };
 }
 

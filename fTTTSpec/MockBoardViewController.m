@@ -35,4 +35,8 @@
   return squares;
 }
 
+- (void)setCurrentPlayer:(NSString *)currentPlayer {
+  self.currentPlayerString = currentPlayer;
+}
+
 @end

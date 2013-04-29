@@ -28,5 +28,6 @@
 - (BOOL)gameIsDraw;
 - (BOOL)gameOverAlertShows;
 - (void)tapNewGame;
+- (NSString *)currentPlayer;
 
 @end

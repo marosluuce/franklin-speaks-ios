@@ -11,8 +11,8 @@
 @implementation TicTacToeInteractor
 
 + (id)newInteractorWithGame:(id <BoardView>)view {
-//  NSURL *url = [NSURL URLWithString:@"http://localhost:5000"];
-  NSURL *url = [NSURL URLWithString:@"http://10.0.1.36:5000"];
+  NSURL *url = [NSURL URLWithString:@"http://localhost:5000"];
+//  NSURL *url = [NSURL URLWithString:@"http://10.0.1.36:5000"];
   HttpConnector *connector = [HttpConnector new];
   ServerCommunicator *communicator = [[ServerCommunicator alloc] initWithUrl:url andWithConnector:connector];
   TicTacToe *game = [[TicTacToe alloc] initWithCommunicator:communicator];
@@ -31,6 +31,7 @@
 
 - (void)updateView:(id <BoardView>)view {
   [self updateSquares:view.squares];
+  [view setCurrentPlayer:self.game.currentplayer];
   
   if (self.game.gameover) {
     [view alertGameOver];

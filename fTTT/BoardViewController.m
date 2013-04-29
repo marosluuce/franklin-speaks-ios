@@ -65,4 +65,8 @@
   [self.interactor newGame:self];
 }
 
+- (void)setCurrentPlayer:(NSString *)currentPlayer {
+  self.currentPlayerLabel.text = currentPlayer;
+}
+
 @end

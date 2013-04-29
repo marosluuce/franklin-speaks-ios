@@ -13,5 +13,6 @@
 @property (strong, nonatomic) NSArray *squares;
 
 - (void)alertGameOver;
+- (void)setCurrentPlayer:(NSString *)currentPlayer;
 
 @end

@@ -6,3 +6,4 @@
 ^PlayerVsPlayerGame
 ^GameOver
 ^NewGame
+^ShowTheCurrentPlayer
