@@ -1,0 +1,71 @@
+!2 Choose Opponent
+
+At Game Startup and New Game 
+
+In order to play the computer:
+
+I want to choose my opponent.  
+
+- Guy with iPhone goes first
+- Can Choose Player/Easy AI/Hard AI
+- Can Re-choose on New Game
+
+!3 Startup 
+
+'''Easy player.'''
+
+|script              |Tic Tac Toe Game       |
+|launch                                      |
+|choose opponent     |easy                   |
+|check current player|Player X               |
+|move to square      |1                      |
+|wait for opponent move                      |
+|check               |current player|Player X|
+|check               |square        |2 |is |O|
+
+'''Hard Player'''
+I'm not sure if this is the correct move for the hard player.  I think it is, but just fix if I'm wrong.
+
+|script              |Tic Tac Toe Game       |
+|launch                                      |
+|choose opponent     |hard                   |
+|check current player|Player X               |
+|move to square      |1                      |
+|wait for opponent move                      |
+|check               |current player|Player X|
+|check               |square        |5 |is |O|
+
+'''Cannot move during opponent turn''' 
+
+Make sure you can't make a diybke nive move and that the opponent can take it.
+
+|script              |Tic Tac Toe Game       |
+|launch                                      |
+|choose opponent     |easy                   |
+|check current player|Player X               |
+|move to square      |1                      |
+|reject              |move to square|2       |
+|wait for opponent move                      |
+|check               |current player|Player X|
+|check               |square        |2 |is |O|
+
+!3 New Game
+Make sure you can actually change the opponent by moving from the easy to the hard player
+
+|script         |Tic Tac Toe Game       |
+|launch                                 |
+|choose opponent|easy                   |
+|move to square |1                      |
+|wait for opponent move                 |
+|move to square |4                      |
+|wait for opponent move                 |
+|move to square |7                      |
+|tap new game                           |
+|choose opponent|hard                   |
+|check          |current player|Player X|
+|move to square |1                      |
+|wait for opponent move                 |
+|check          |square        |5 |is |0|
+|check          |square        |2 |is |O|
+
+
