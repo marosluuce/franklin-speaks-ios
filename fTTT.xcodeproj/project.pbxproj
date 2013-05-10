@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07BC4536173D6BA3003B6711 /* BoardSquareSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BC4535173D6BA3003B6711 /* BoardSquareSpec.m */; };
 		14092F961732EE4B001B75EC /* NewGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14092F941732EE4B001B75EC /* NewGameViewController.m */; };
 		14092F971732EE4B001B75EC /* NewGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14092F951732EE4B001B75EC /* NewGameViewController.xib */; };
 		1409FD7B1718527F00AE4801 /* MockHttpConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1409FD7A1718527F00AE4801 /* MockHttpConnector.m */; };
@@ -122,6 +123,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07BC4535173D6BA3003B6711 /* BoardSquareSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardSquareSpec.m; sourceTree = "<group>"; };
 		14092F931732EE4B001B75EC /* NewGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewGameViewController.h; path = ../NewGameViewController.h; sourceTree = "<group>"; };
 		14092F941732EE4B001B75EC /* NewGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewGameViewController.m; path = ../NewGameViewController.m; sourceTree = "<group>"; };
 		14092F951732EE4B001B75EC /* NewGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewGameViewController.xib; path = ../NewGameViewController.xib; sourceTree = "<group>"; };
@@ -543,6 +545,7 @@
 		14FD1901171319CC006DD78B /* fTTTSpec */ = {
 			isa = PBXGroup;
 			children = (
+				07BC4535173D6BA3003B6711 /* BoardSquareSpec.m */,
 				1409FD751718524D00AE4801 /* Mocks */,
 				14FD1902171319CC006DD78B /* Supporting Files */,
 				14EAFB8F1717340500E5F09F /* FranklinAppDelegateSpec.m */,
@@ -835,6 +838,7 @@
 				1433B2C31720544D006D70AF /* TicTacToeInteractor.m in Sources */,
 				1433B2C617205599006D70AF /* TicTacToeInteractorSpec.m in Sources */,
 				1421CFA51739F0CA00466DE3 /* NewGameViewController.m in Sources */,
+				07BC4536173D6BA3003B6711 /* BoardSquareSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

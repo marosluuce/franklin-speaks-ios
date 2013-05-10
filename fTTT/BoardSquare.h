@@ -13,6 +13,9 @@
 @interface BoardSquare : NSObject <Square>
 
 @property (strong, nonatomic) UIButton *button;
+@property (readonly) UIColor *XColor;
+@property (readonly) UIColor *OColor;
+
 
 - (id)initWithButton:(UIButton *)button;
 - (void)setColorBasedOnSymbol:(NSString *)symbol;
