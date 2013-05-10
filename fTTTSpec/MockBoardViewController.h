@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-#import "BoardView.h"
+#import "Board.h"
 #import "MockSquare.h"
 
-@interface MockBoardViewController : NSObject <BoardView>
+@interface MockBoardViewController : NSObject <Board>
 
 @property BOOL gameOverAlertCalled;
 @property (strong, nonatomic) NSArray *squares;

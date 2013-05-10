@@ -36,6 +36,12 @@ OCDSpec2Context(ServerCommunicatorSpec) {
       [ExpectObj(query) toBeEqualTo:@"stuff=junk&moar=alsojunk"];
     });
     
+    It(@"is an empty string for an empty dictionary", ^{
+      NSString *query = [communicator dictionaryToQueryString:@{}];
+      
+      [ExpectObj(query) toBeEqualTo:@""];
+    });
+    
   });
   
   Describe(@"-buildRequest", ^{

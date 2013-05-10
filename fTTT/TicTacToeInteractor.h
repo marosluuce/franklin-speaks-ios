@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "BoardView.h"
+#import "Board.h"
 #import "HttpConnector.h"
 #import "ServerCommunicator.h"
 #import "Square.h"
@@ -17,13 +17,14 @@
 @interface TicTacToeInteractor : NSObject
 
 @property (strong, nonatomic) TicTacToe *game;
+@property (strong, nonatomic) id<Board> board;
 
-+ (id)newInteractorWithGame:(id <BoardView>)view;
-- (id)initWithGame:(TicTacToe *)game withView:(id <BoardView>)view;
-- (void)updateView:(id <BoardView>)view;
++ (id)newInteractorWithGame:(id<Board>)board;
+- (id)initWithGame:(TicTacToe *)game withBoard:(id <Board>)board;
+- (void)updateView;
 - (NSString *)gameOverMessage;
 - (void)updateSquares:(NSArray *)squares;
-- (void)doMove:(int)square withView:(id <BoardView>)view;
-- (void)newGame:(id <BoardView>)view;
+- (void)doMove:(int)square;
+- (void)newGame:(NSString *) opponent;
 
 @end

@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-#import "BoardView.h"
+#import "Board.h"
 #import "BoardSquare.h"
+#import "NewGameViewController.h"
 #import "Square.h"
 #import "TicTacToeInteractor.h"
 
-@interface BoardViewController : UIViewController <BoardView>
+@interface BoardViewController : UIViewController <Board>
 
 @property (strong, nonatomic) TicTacToeInteractor *interactor;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
@@ -23,5 +24,6 @@
 - (IBAction)touchSquare:(id)sender;
 - (void)alertGameOver;
 - (NSArray *)buttonsToSquares:(NSArray *)buttons;
+- (void)newGameView;
 
 @end

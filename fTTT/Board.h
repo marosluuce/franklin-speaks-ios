@@ -1,5 +1,5 @@
 //
-//  BoardView.h
+//  Board.h
 //  fTTT
 //
 //  Created by Nathan Walker on 4/17/13.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol BoardView <NSObject>
+@protocol Board <NSObject>
 
 @property (strong, nonatomic) NSArray *squares;
 

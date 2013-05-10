@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "BoardView.h"
+#import "Board.h"
 #import "Communicator.h"
 #import "Square.h"
 

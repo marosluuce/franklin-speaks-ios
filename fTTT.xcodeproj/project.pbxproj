@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14092F961732EE4B001B75EC /* NewGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14092F941732EE4B001B75EC /* NewGameViewController.m */; };
+		14092F971732EE4B001B75EC /* NewGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14092F951732EE4B001B75EC /* NewGameViewController.xib */; };
 		1409FD7B1718527F00AE4801 /* MockHttpConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1409FD7A1718527F00AE4801 /* MockHttpConnector.m */; };
 		1409FD8017185B4500AE4801 /* HttpConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1409FD7F17185B4500AE4801 /* HttpConnector.m */; };
+		1421CFA51739F0CA00466DE3 /* NewGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14092F941732EE4B001B75EC /* NewGameViewController.m */; };
 		1429B9221714C2EF0016E094 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FD18CC171318B8006DD78B /* UIKit.framework */; };
 		1429B9231714C2EF0016E094 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FD18CE171318B8006DD78B /* Foundation.framework */; };
 		1429B9291714C2EF0016E094 /* SocketServer.c in Sources */ = {isa = PBXBuildFile; fileRef = 1429B9281714C2EF0016E094 /* SocketServer.c */; };
@@ -119,6 +122,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14092F931732EE4B001B75EC /* NewGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewGameViewController.h; path = ../NewGameViewController.h; sourceTree = "<group>"; };
+		14092F941732EE4B001B75EC /* NewGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewGameViewController.m; path = ../NewGameViewController.m; sourceTree = "<group>"; };
+		14092F951732EE4B001B75EC /* NewGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewGameViewController.xib; path = ../NewGameViewController.xib; sourceTree = "<group>"; };
 		1409FD791718527F00AE4801 /* MockHttpConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockHttpConnector.h; sourceTree = "<group>"; };
 		1409FD7A1718527F00AE4801 /* MockHttpConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockHttpConnector.m; sourceTree = "<group>"; };
 		1409FD7D171852D700AE4801 /* Connector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connector.h; sourceTree = "<group>"; };
@@ -185,7 +191,7 @@
 		1488BC491715BFAB00191E70 /* libOCDSpec2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCDSpec2.a; sourceTree = "<group>"; };
 		14B19442171F14E400BE10D2 /* MockBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockBoardViewController.h; sourceTree = "<group>"; };
 		14B19443171F14E400BE10D2 /* MockBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockBoardViewController.m; sourceTree = "<group>"; };
-		14B19448171F15B400BE10D2 /* BoardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoardView.h; sourceTree = "<group>"; };
+		14B19448171F15B400BE10D2 /* Board.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
 		14EAFB8A1717248F00E5F09F /* BoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardViewController.h; sourceTree = "<group>"; };
 		14EAFB8B1717248F00E5F09F /* BoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardViewController.m; sourceTree = "<group>"; };
 		14EAFB8C1717248F00E5F09F /* BoardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardViewController.xib; sourceTree = "<group>"; };
@@ -498,21 +504,24 @@
 		14FD18D2171318B8006DD78B /* fTTT */ = {
 			isa = PBXGroup;
 			children = (
-				14FD18DB171318B8006DD78B /* FranklinAppDelegate.h */,
-				14FD18DC171318B8006DD78B /* FranklinAppDelegate.m */,
+				14EC6633171C4625008DED05 /* Communication */,
 				14FD18D3171318B8006DD78B /* Supporting Files */,
+				14EC6646171C7D91008DED05 /* BoardSquare.h */,
+				14EC6647171C7D91008DED05 /* BoardSquare.m */,
+				14B19448171F15B400BE10D2 /* Board.h */,
 				14EAFB8A1717248F00E5F09F /* BoardViewController.h */,
 				14EAFB8B1717248F00E5F09F /* BoardViewController.m */,
 				14EAFB8C1717248F00E5F09F /* BoardViewController.xib */,
-				14EC6633171C4625008DED05 /* Communication */,
+				14FD18DB171318B8006DD78B /* FranklinAppDelegate.h */,
+				14FD18DC171318B8006DD78B /* FranklinAppDelegate.m */,
+				14092F931732EE4B001B75EC /* NewGameViewController.h */,
+				14092F941732EE4B001B75EC /* NewGameViewController.m */,
+				14092F951732EE4B001B75EC /* NewGameViewController.xib */,
 				14EC6637171C4753008DED05 /* TicTacToe.h */,
 				14EC6638171C4753008DED05 /* TicTacToe.m */,
 				1433B2C01720544D006D70AF /* TicTacToeInteractor.h */,
 				1433B2C11720544D006D70AF /* TicTacToeInteractor.m */,
 				14EC6645171C7D82008DED05 /* Square.h */,
-				14EC6646171C7D91008DED05 /* BoardSquare.h */,
-				14EC6647171C7D91008DED05 /* BoardSquare.m */,
-				14B19448171F15B400BE10D2 /* BoardView.h */,
 			);
 			path = fTTT;
 			sourceTree = "<group>";
@@ -708,6 +717,7 @@
 				14FD18E1171318B8006DD78B /* Default@2x.png in Resources */,
 				14FD18E3171318B8006DD78B /* Default-568h@2x.png in Resources */,
 				14EAFB8E1717249000E5F09F /* BoardViewController.xib in Resources */,
+				14092F971732EE4B001B75EC /* NewGameViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -800,6 +810,7 @@
 				14EC6639171C4753008DED05 /* TicTacToe.m in Sources */,
 				14EC6648171C7D91008DED05 /* BoardSquare.m in Sources */,
 				1433B2C21720544D006D70AF /* TicTacToeInteractor.m in Sources */,
+				14092F961732EE4B001B75EC /* NewGameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -823,6 +834,7 @@
 				14B19444171F14E400BE10D2 /* MockBoardViewController.m in Sources */,
 				1433B2C31720544D006D70AF /* TicTacToeInteractor.m in Sources */,
 				1433B2C617205599006D70AF /* TicTacToeInteractorSpec.m in Sources */,
+				1421CFA51739F0CA00466DE3 /* NewGameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,7 @@
-|AcceptanceTests.ChooseMyOpponent||10:27:45 Thu, May 02, 2013|
+|AcceptanceTests.ChooseMyOpponent||20:51:56 Thu, May 09, 2013|
+|AcceptanceTests.NewGame||21:21:32 Wed, May 08, 2013|
+|AcceptanceTests.ShowTheCurrentPlayer||21:18:28 Wed, May 08, 2013|
 |AcceptanceTests||10:00:36 Thu, May 02, 2013|
-|AcceptanceTests.ShowTheCurrentPlayer||15:55:28 Mon, Apr 29, 2013|
-|AcceptanceTests.NewGame||15:22:47 Mon, Apr 22, 2013|
 |AcceptanceTests.GameOver||13:17:21 Wed, Apr 17, 2013|
 |AcceptanceTests.PlayerVsPlayerGame||14:49:05 Mon, Apr 15, 2013|
 |FrontPage||09:35:09 Thu, Apr 11, 2013|

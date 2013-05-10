@@ -26,8 +26,8 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    self.squares = [self buttonsToSquares:self.buttons];
+  [super viewDidLoad];
+  self.squares = [self buttonsToSquares:self.buttons];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,14 +37,14 @@
 }
 
 - (IBAction)touchSquare:(id)sender {
-  [self.interactor doMove:[sender tag] withView:self];
+  [self.interactor doMove:[sender tag]];
 }
 
 - (void)alertGameOver {
   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Game Over"
                                                   message:[self.interactor gameOverMessage]
                                                  delegate:self
-                                        cancelButtonTitle:@"New Game"
+                                        cancelButtonTitle:@"Ok"
                                         otherButtonTitles:nil];
   
   [alert show];
@@ -62,11 +62,17 @@
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-  [self.interactor newGame:self];
+//  [self newGameView];
+  [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (void)setCurrentPlayer:(NSString *)currentPlayer {
   self.currentPlayerLabel.text = currentPlayer;
+}
+
+- (void)newGameView {
+  NewGameViewController *controller = [[NewGameViewController alloc] initWithInteractor:self.interactor];
+  [self presentViewController:controller animated:YES completion:NULL];
 }
 
 @end

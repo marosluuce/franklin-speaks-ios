@@ -25,16 +25,33 @@
   self.lastRequest = dict;
   
   if ([dict objectForKey:@"square"]) {
-    int index = [[dict objectForKey:@"square"] intValue] - 1;
-    [self.squares setObject:[self flipFlopXO] atIndexedSubscript:index];
+    int square = [[dict objectForKey:@"square"] intValue] - 1;
+    if ([[self.squares objectAtIndex:square] isEqualToString:@""]) {
+      [self move:square];
+      if ([self.opponent isEqualToString:@"easy_ai"]) {
+        [self move:[self easyAI]];
+      }
+      else if ([self.opponent isEqualToString:@"hard_ai"]) {
+        [self move:[self hardAI]];
+      }
+    }
   }
   else if ([dict objectForKey:@"newgame"]) {
     [self newGame];
+    self.opponent = [dict objectForKey:@"newgame"];
   }
   return [self gameState];
 }
 
-- (NSString *)flipFlopXO {
+- (void)move:(int)square {
+  [self.squares setObject:[self currentPlayer] atIndexedSubscript:square];
+}
+
+- (void)undoMove:(int)square {
+  [self.squares setObject:@"" atIndexedSubscript:square];
+}
+
+- (NSString *)currentPlayer {
   int count = 0;
   for (NSString *value in self.squares) {
     count += [value isEqualToString:@""];
@@ -93,8 +110,80 @@
   return @{@"squares": self.squares,
            @"winner": [self winner],
            @"gameover": [NSNumber numberWithBool:[self gameover]],
-           @"currentplayer": [NSString stringWithFormat:@"Player %@", [self flipFlopXO]],
+           @"currentplayer": [NSString stringWithFormat:@"Player %@", [self currentPlayer]],
           };
+}
+
+- (NSArray *)availableSquares {
+  NSMutableArray *available = [NSMutableArray new];
+  for (int i = 0; i < self.squares.count; i++) {
+    NSString *value = [self.squares objectAtIndex:i];
+    if ([value isEqualToString:@""]) {
+      [available addObject:[NSNumber numberWithInt:i]];
+    }
+  }
+  return available;
+}
+
+- (int)easyAI {
+  return [[[self availableSquares] objectAtIndex:0] intValue];
+}
+
+- (int)score {
+  if ([[self winner] isEqualToString:@""]) {
+    return 0;
+  }
+  else if ([[self winner] isEqualToString:[self currentPlayer]]) {
+    return 1;
+  }
+  else {
+    return -1;
+  }
+}
+
+- (int)hardAI {
+  if ([[self.squares objectAtIndex:4] isEqualToString:@""]) {
+    return 4;
+  }
+
+  int move = -1;
+  int value = -999;
+  
+  for (NSNumber *number in [self availableSquares]) {
+    int square = [number intValue];
+    [self move:square];
+    
+    int score = -1 * [self hardAIHelper];
+    if (score > value) {
+      value = score;
+      move = square;
+    }
+    
+    [self undoMove:square];
+  }
+  
+  return move;
+}
+
+- (int)hardAIHelper {
+  if ([self gameover]) {
+    return [self score];
+  }
+  
+  int value = -999;
+  
+  for (NSNumber *number in [self availableSquares]) {
+    int square = [number intValue];
+    [self move:square];
+    
+    int score = -1 * [self hardAIHelper];
+    if (score > value) {
+      value = score;
+    }
+    
+    [self undoMove:square];
+  }
+  return value;
 }
 
 @end

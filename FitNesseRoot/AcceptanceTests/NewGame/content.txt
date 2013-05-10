@@ -12,9 +12,9 @@ When the game is over, the alert message should have a New Game button (not an O
 
 !3 Click the OK button
 
-|script                      |
-|ensure|game over alert shows|
-|tap new game                |
+|script                            |
+|ensure      |game over alert shows|
+|tap new game|human                |
 
 !3 Make sure you can play again
 It should start again with X - player 1.

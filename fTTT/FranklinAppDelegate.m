@@ -12,7 +12,8 @@
 @implementation FranklinAppDelegate
 
 - (id)init {
-  return [self initWithController:[BoardViewController new]];
+//  return [self initWithController:[BoardViewController new]];
+  return [self initWithController:[[NewGameViewController alloc] initControllerAndInteractor]];
 }
 
 - (id)initWithController:(UIViewController *)controller {

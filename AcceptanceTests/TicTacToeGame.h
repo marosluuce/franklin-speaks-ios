@@ -19,7 +19,7 @@
 
 @property (strong, nonatomic) TicTacToe *game;
 @property (strong, nonatomic) TicTacToeInteractor *interactor;
-@property (strong, nonatomic) MockBoardViewController *view;
+@property (strong, nonatomic) MockBoardViewController *board;
 
 - (void)launch;
 - (void)moveToSquare:(NSString *)square;
@@ -29,5 +29,7 @@
 - (BOOL)gameOverAlertShows;
 - (void)tapNewGame;
 - (NSString *)currentPlayer;
+- (void)chooseOpponent:(NSString *)opponent;
+- (void)waitForOpponent;
 
 @end

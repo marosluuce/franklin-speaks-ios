@@ -14,12 +14,19 @@
 
 @property (strong, nonatomic) NSMutableArray *squares;
 @property (strong, nonatomic) NSDictionary *lastRequest;
+@property (strong, nonatomic) NSString *opponent;
 
-- (NSString *)flipFlopXO;
+- (void)move:(int)square;
+- (void)undoMove:(int)square;
+- (NSString *)currentPlayer;
 - (NSString *)winner;
 - (BOOL)full;
 - (BOOL)gameover;
 - (void)newGame;
 - (NSDictionary *)gameState;
+- (NSArray *)availableSquares;
+- (int)easyAI;
+- (int)score;
+- (int)hardAI;
 
 @end

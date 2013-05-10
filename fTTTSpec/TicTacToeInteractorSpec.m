@@ -11,22 +11,22 @@ OCDSpec2Context(TicTacToeInteractorSpec) {
   
   __block TicTacToeInteractor *interactor;
   __block TicTacToe *game;
-  __block MockBoardViewController *view;
+  __block MockBoardViewController *board;
   __block MockCommunicator *communicator;
   
   BeforeEach(^{
     communicator = [MockCommunicator new];
     game = [[TicTacToe alloc] initWithCommunicator:communicator];
-    view = [MockBoardViewController new];
-    interactor = [[TicTacToeInteractor alloc] initWithGame:game withView:view];
+    board = [MockBoardViewController new];
+    interactor = [[TicTacToeInteractor alloc] initWithGame:game withBoard:board];
   });
   
   Describe(@"-initWithGame", ^{
     
-    It(@"sends a newgame command", ^{
-      interactor = [[TicTacToeInteractor alloc] initWithGame:game withView:view];
-      [ExpectObj(communicator.lastRequest) toBeEqualTo:@{@"newgame": @"true"}];
-    });
+//    It(@"sends a newgame command", ^{
+//      interactor = [[TicTacToeInteractor alloc] initWithGame:game withBoard:board];
+//      [ExpectObj(communicator.lastRequest) toBeEqualTo:@{@"newgame": @"true"}];
+//    });
     
   });
   
@@ -34,33 +34,33 @@ OCDSpec2Context(TicTacToeInteractorSpec) {
     
     It(@"alerts if the game is over", ^{
       game.gameover = NO;
-      [interactor updateView:view];
+      [interactor updateView];
       
-      [ExpectBool(view.gameOverAlertCalled) toBeFalse];
+      [ExpectBool(board.gameOverAlertCalled) toBeFalse];
       
       game.gameover = YES;
-      [interactor updateView:view];
+      [interactor updateView];
       
-      [ExpectBool(view.gameOverAlertCalled) toBeTrue];
+      [ExpectBool(board.gameOverAlertCalled) toBeTrue];
     });
     
     It(@"updates the squares", ^{
       game.squares = @[@"X", @"O", @"X",
                        @"X", @"X", @"",
                        @"O", @"O", @"X",];
-      [interactor updateView:view];
+      [interactor updateView];
       
-      for (int i = 0; i < [view.squares count]; i++) {
-        MockSquare *square = [view.squares objectAtIndex:i];
+      for (int i = 0; i < [board.squares count]; i++) {
+        MockSquare *square = [board.squares objectAtIndex:i];
         [ExpectObj([square value]) toBeEqualTo:[game.squares objectAtIndex:i]];
       }
     });
     
     It(@"updates the current player", ^{
       game.currentplayer = @"Player X";
-      [interactor updateView:view];
+      [interactor updateView];
       
-      [ExpectObj(view.currentPlayerString) toBeEqualTo:@"Player X"];
+      [ExpectObj(board.currentPlayerString) toBeEqualTo:@"Player X"];
     });
     
   });
@@ -93,10 +93,10 @@ OCDSpec2Context(TicTacToeInteractorSpec) {
       game.squares = @[@"X", @"O", @"X",
                        @"X", @"X", @"",
                        @"O", @"O", @"X",];
-      [interactor updateSquares:view.squares];
+      [interactor updateSquares:board.squares];
       
-      for (int i = 0; i < [view.squares count]; i++) {
-        MockSquare *square = [view.squares objectAtIndex:i];
+      for (int i = 0; i < [board.squares count]; i++) {
+        MockSquare *square = [board.squares objectAtIndex:i];
         [ExpectObj([square value]) toBeEqualTo:[game.squares objectAtIndex:i]];
       }
     });
@@ -106,7 +106,7 @@ OCDSpec2Context(TicTacToeInteractorSpec) {
   Describe(@"-doMove:withView:", ^{
     
     It(@"makes a move", ^{
-      [interactor doMove:1 withView:view];
+      [interactor doMove:1];
       
       [ExpectObj([game squareIs:1]) toBeEqualTo:@"X"];
     });
@@ -116,24 +116,23 @@ OCDSpec2Context(TicTacToeInteractorSpec) {
   Describe(@"-newGame", ^{
     
     It(@"sends a newgame message", ^{
-      [interactor newGame:view];
+      [interactor newGame:@"easy_ai"];
       
-      [ExpectObj(communicator.lastRequest) toBeEqualTo:@{@"newgame": @"true"}];
+      [ExpectObj(communicator.lastRequest) toBeEqualTo:@{@"newgame": @"easy_ai"}];
     });
     
     It(@"updates to show the blank squares", ^{
       game.squares = @[@"X", @"O", @"X",
                        @"X", @"X", @"",
                        @"O", @"O", @"X",];
-      [interactor updateSquares:view.squares];
-      [interactor newGame:view];
+      [interactor updateSquares:board.squares];
+      [interactor newGame:@"easy_ai"];
       
-      for (int i = 0; i < [view.squares count]; i++) {
-        MockSquare *square = [view.squares objectAtIndex:i];
+      for (int i = 0; i < [board.squares count]; i++) {
+        MockSquare *square = [board.squares objectAtIndex:i];
         [ExpectObj([square value]) toBeEqualTo:@""];
       }
     });
     
   });
-  
 }

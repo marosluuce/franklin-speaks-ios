@@ -1,10 +1,11 @@
 It is extremely difficult to tell who's turn is.  Show the current player on screen.  Player X/Player O is fine in the spot where we currently show Player X,
 
 
-|script        |Tic Tac Toe Game|
-|launch                         |
-|check | current player | Player X |
-|move to square|1               |
-|check | current player | Player O |
-|move to square|4               |
-|check | current player | Player X |
+|script        |Tic Tac Toe Game       |
+|launch                                |
+|tap new game  |human                  |
+|check         |current player|Player X|
+|move to square|1                      |
+|check         |current player|Player O|
+|move to square|4                      |
+|check         |current player|Player X|
